@@ -4,10 +4,7 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
 
 a{
     text-decoration: none;
@@ -106,12 +103,19 @@ main #Products {
 
 main #Products .images{
     display: flex;
-    gap: 4em;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    max-width: 100%;
 }
 
 main #Products h2 {
-    margin-bottom: .5em;
+    text-align: center;
+    /* margin-bottom: 1em; */
     font-size: 2em;
+    margin: auto;
+    padding: 2em;
 }
 .images  figcaption{
     text-align: center;
