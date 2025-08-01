@@ -1,0 +1,406 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(205, 100%, 50%); 
+    font-size: 1.2rem;
+}
+li{
+    list-style: none;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.3rem;
+}
+
+#Home{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+}
+
+#Home .left p {
+    line-height: 2.5em;
+    flex-direction: column;
+    width: 90%;
+    margin: .6em;
+    font-size: 1.1em;
+}
+#Home .left {
+    flex-direction: column;
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+}
+#Home h1{
+    font-size: 3rem;
+    margin: 0.3rem;
+}
+
+#Home button a{
+    color: #ffffff;
+    font-size: .8em;
+}
+
+#Home button {
+        position: relative;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        color: white;
+        background-color: red; 
+        border: none;
+        border-radius: .5em;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 0;
+}
+
+#Home button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0%;
+        background-color: #4a4a4b; 
+        border-radius: .5em;
+        transition: width 0.5s ease;
+        z-index: -1;
+}
+#Home button:hover::before {
+        width: 100%; 
+}
+#Home button:hover {
+        color: white;
+}
+#Home .right img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+main #Products {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-start;
+}
+
+main #Products .images{
+    display: flex;
+    gap: 4em;
+}
+
+main #Products h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+}
+.images  figcaption{
+    text-align: center;
+    margin-top: .5em;
+    padding: 1em;
+}
+
+.images  figcaption p:first-child{
+    font-size: 1.3em;
+}
+.images figcaption p:last-child{
+    color: red;
+}
+
+.images  .skagen img, .silver img, .golden img
+{
+    transition: 1s;
+}
+.overflow{
+    overflow: hidden;
+}
+.images  .skagen img:hover, .silver img:hover, .golden img:hover{
+    transform: scale(1.1)
+}
+#Arrivals {padding-top: 4.5rem;
+margin-bottom: 4.5em;}
+#Arrivals h3 {
+    text-align: center;
+}
+
+#Arrivals h3 {
+    font-size: 2em;
+    padding: 1em;
+}
+
+#Arrivals>p{
+    margin: auto;
+    text-align: center;
+    width: 54%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: auto;
+}
+
+.content img {
+    border-bottom: red solid .4em;
+}
+.content figcaption{
+    align-items: center;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.content .price {
+    padding: 0.5em 1.5em;
+    color: red;
+    background-color: lightgray;
+    font-weight: 800;
+    border-radius: 2em;
+    display:flex;
+    align-items: center;
+    font-size: 1em;
+    justify-content: center;
+    
+}
+
+.lastTopic {
+    margin-top: 4.5em;
+}
+
+.imgcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2em;
+}
+
+.leftimg {
+    width: 50%;
+    display: flex;
+}
+
+.leftimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.centerimg {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.centerimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rightimg {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.rightimg img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+/* Tablet: 641px - 768px */
+@media (max-width: 768px) and (min-width: 641px) {
+
+    #Home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em 1em;
+        gap: 2em;
+        width: 100%;
+    }
+
+    #Home .left, #Home .right {
+        width: 90%;
+        align-items: center;
+    }
+
+    #Home .left p {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    #Home h1 {
+        font-size: 2.2rem;
+    }
+
+    #Home button {
+        font-size: 1rem;
+        padding: 0.8em 2em;
+    }
+
+    #Arrivals h3,
+    #Arrivals > p {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .content section {
+        width: 80%;
+        text-align: center;
+    }
+
+    .content figcaption {
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    .content .price {
+        display: inline-block;
+        margin: 1em auto 0;
+        padding: 0.5em 1.5em;
+        font-size: 1em;
+        font-weight: bold;
+        color: red;
+        background-color: lightgray;
+        border-radius: 2em;
+    }
+
+    .imgcon {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .leftimg,
+    .centerimg,
+    .rightimg {
+        width: 90%;
+    }
+
+    .rightimg {
+        flex-direction: row;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .rightimg img {
+        width: 48%;
+        height: auto;
+    }
+}
+
+/* Phone: 0px - 640px */
+@media (max-width: 640px) {
+
+    #Home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2em 1em;
+        gap: 2em;
+        width: 100%;
+    }
+
+    #Home .left, #Home .right {
+        width: 100%;
+        align-items: center;
+    }
+
+    #Home .left p {
+        width: 90%;
+        font-size: 0.95em;
+    }
+
+    #Home h1 {
+        font-size: 2rem;
+    }
+
+    #Home button {
+        font-size: 0.9rem;
+        padding: 0.7em 1.5em;
+    }
+
+    #Arrivals h3,
+    #Arrivals > p {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .content section {
+        width: 90%;
+        text-align: center;
+    }
+
+    .content figcaption {
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    .content .price {
+        display: inline-block;
+        margin: 1em auto 0;
+        padding: 0.5em 1.5em;
+        font-size: 1em;
+        font-weight: bold;
+        color: red;
+        background-color: lightgray;
+        border-radius: 2em;
+    }
+
+    .imgcon {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .leftimg,
+    .centerimg,
+    .rightimg {
+        width: 90%;
+    }
+
+    .rightimg {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .rightimg img {
+        width: 100%;
+        height: auto;
+    }
+}
